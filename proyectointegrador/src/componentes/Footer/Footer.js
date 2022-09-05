@@ -3,7 +3,7 @@ import "./Footer.css";
 
 function Footer(){
     return(
-        <footer className="footer">
+    <footer class="footer">
         <ul className="team">
             <li>Eugenia Garcia Borghes</li>
             <li>Franco Santicchia</li>
