@@ -1,0 +1,9 @@
+.footer{
+    display: flex;
+    background-color:grey;
+    justify-content: right;
+    
+}
+.team{
+    margin-right: 40%;
+}
