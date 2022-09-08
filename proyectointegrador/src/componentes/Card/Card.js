@@ -1,6 +1,10 @@
-import React, {Component} from "react";
-import "./Card.css";
+import React, {Component} from 'react'
+/*import "./Card.css";*/
 
-class Card extends Component{
-    
+function Cards () {
+    return (
+        <div> Cards</div>
+    )
 }
+
+export default Cards
