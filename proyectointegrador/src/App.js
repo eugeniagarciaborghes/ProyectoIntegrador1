@@ -1,8 +1,17 @@
 import React from 'react';
-import Footer from './componentes/Footer/Footer';
+import Home from './screens/Home/Home';
+/*import Footer from './componentes/Footer/Footer';*/
 
 
 function App() {
+  return(
+    <Home/>
+
+  );
+  
+}
+
+/*function App() {
   return (
     <React.Fragment>
     <Footer>
@@ -19,6 +28,6 @@ function App() {
 
 
   );
-}
+}*/
 
 export default App;
