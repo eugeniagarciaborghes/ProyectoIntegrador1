@@ -1,10 +1,15 @@
 import React, {Component} from 'react'
-/*import "./Card.css";*/
+    /*import "./Card.css";*/
 
-function Cards () {
-    return (
-        <div> Cards</div>
-    )
+    class Card extends Component {
+        constructor(props){
+            super(props)
+        }
+    render () {
+        return (
+            <div>{this.props.info}</div>
+        )
+    }    
 }
 
-export default Cards
+export default Card

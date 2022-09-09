@@ -1,10 +1,16 @@
 import React from 'react'
-import tarjeta from '../Card/Card'
-/*import "./Card.css";*//
+import Card from '../Card/Card'
+/*import "./Card.css";*/
 
 function Cards (props) {
+    console.log(props.info);
     return (
-        <div> Cards</div>
+        <> 
+            {
+                props.info.map(elm => <Card info={elm}/>)
+            }
+
+        </>
     )
 }
 
