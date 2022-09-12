@@ -1,11 +1,18 @@
 import React from 'react';
 import Home from './screens/Home/Home';
-/*import Footer from './componentes/Footer/Footer';*/
+import Footer from './componentes/Footer/Footer';
 
 
 function App() {
+
+  const opciones = ['Home', 'Favoritos']
   return(
+
+    <div>
+    <Header menu ={opciones}/>
     <Home/>
+    <Footer/>
+    </div>
 
   );
   

@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Cards from '../../componentes/Cards/Cards';
+import App from '../../App';
 /*import Cards from '../../componentes/Cards'*/
 
 class Home extends Component {
@@ -22,7 +23,7 @@ class Home extends Component {
             ready : true
 
         }))
-       /* .then(data => console.log(data))*/
+       .then(data => console.log(data))
         .catch (error => console.log(error));
     }
 
