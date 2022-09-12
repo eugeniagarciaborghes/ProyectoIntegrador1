@@ -1,6 +1,8 @@
 import React from 'react';
 import Home from './screens/Home/Home';
 import Footer from './componentes/Footer/Footer';
+import Header from './componentes/Header/Header';
+
 
 
 function App() {

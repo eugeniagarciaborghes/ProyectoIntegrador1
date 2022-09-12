@@ -5,7 +5,10 @@ import React, {Component} from 'react'
         constructor(props){
             super(props)
         }
+
+        
     render () {
+        console.log(props.info)
         return (
             <div>{this.props.info}</div>
         )

@@ -7,7 +7,7 @@ function Cards (props) {
     return (
         <> 
             {
-                props.info.map(elm => <Card info={elm}/>)
+                props.info?.map(elm => <Card info={elm}/>)
             }
 
         </>

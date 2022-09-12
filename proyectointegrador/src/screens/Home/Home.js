@@ -9,7 +9,7 @@ class Home extends Component {
         this.state={
             movies: [],
             series: [],
-            ready : false
+            /*ready : false*/
 
 
         }
@@ -19,27 +19,27 @@ class Home extends Component {
         fetch('https://api.themoviedb.org/3/movie/popular?api_key=8f700484f7a536b79e4de455e52eb11a')
         .then(response => response.json())
         .then(data => this.setState({
-            movies: data.data,
-            ready : true
+            movies: data.results,
+            //ready : true
 
-        }))
-       .then(data => console.log(data))
+        }, console.log(data.results)))
         .catch (error => console.log(error));
     }
 
 
     render () {
         return (
-            <>
-            <h1> Home</h1>
-            {
-                this.state.ready ?
+            <div>
+                <>
+                    { this.state.movies === '' ?   
                     <>
-                        <Cards info ={this.state.movies} />
-                    </> :
-                'Cargando...'
-            }
-            </>
+                    <h1> Home</h1>
+                    <h3> Cargando...</h3>
+                    </>
+                    :
+                    <Cards info ={this.state.movies} /> }
+                </>
+            </div>
 
         )
     }
