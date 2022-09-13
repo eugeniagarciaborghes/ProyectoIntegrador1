@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 /*import "./Card.css";*/
+import {Link} from 'react-router-dom';
 
 class Card extends Component {
     constructor(props){
@@ -18,6 +19,17 @@ class Card extends Component {
                     <img src= {this.props.info.poster_path} alt= {this.props.info.title}></img>
                 </div>
                 <i className={`fas fa-${this.props.info.icon} fa-2x text-gray-300`}></i>
+                <>
+                    <a href=''>Ver mas</a>
+                    <br></br>
+                    <p>Agregar a favoritos</p>
+                    <br></br>
+                    <>
+                        <a href='./Details'>Ir a Detalles</a>
+
+                    </>
+                    
+                </>
             </article>
         )
     }    

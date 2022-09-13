@@ -1,7 +1,9 @@
 import React from 'react';
+
 import Home from './screens/Home/Home';
 import Footer from './componentes/Footer/Footer';
 import Header from './componentes/Header/Header';
+import Details from './screens/Details/Details';
 
 
 
@@ -15,10 +17,22 @@ function App() {
     <Home/>
     <Footer/>
     </div>
-
+ 
   );
   
 }
+
+/* app repo clase function App() {
+  return (
+    <>
+      <Header />
+      <Switch>
+        <Route path={'/'} exact={true} component={Home} />
+        <Route path={'/Details/:id'} component={Details} />
+      </Switch>
+    </>
+  );
+}*/
 
 /*function App() {
   return (

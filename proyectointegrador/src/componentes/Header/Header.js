@@ -17,6 +17,19 @@ function Header(props) {
                     {props.menu.map((opcion, idx) =><li key={`${Date.now()}-${idx}`} >{opcion}</li>)}
                     </nav>
                 </div>
+
+                <ul>
+                    <li>
+                        <a href= '/'> HOME</a>
+                    </li>
+
+                    <li>
+                        <a href= ''> FAV</a>
+                    </li>
+
+                    
+                    
+                </ul>
             </div>
         </header>
     )
