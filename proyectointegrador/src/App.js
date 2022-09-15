@@ -1,9 +1,11 @@
 import React from 'react';
+import {Switch, Route} from 'react-router-dom'
 
 import Home from './screens/Home/Home';
 import Footer from './componentes/Footer/Footer';
 import Header from './componentes/Header/Header';
 import Details from './screens/Details/Details';
+import NotFound from './screens/NotFound/NotFound';
 
 
 
@@ -22,7 +24,7 @@ function App() {
   
 }
 
-/* app repo clase function App() {
+/*function App() {
   return (
     <>
       <Header />
@@ -30,6 +32,7 @@ function App() {
         <Route path={'/'} exact={true} component={Home} />
         <Route path={'/Details/:id'} component={Details} />
       </Switch>
+      <Footer/>
     </>
   );
 }*/
