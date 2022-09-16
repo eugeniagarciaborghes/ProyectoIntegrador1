@@ -14,6 +14,8 @@ class Home extends Component {
             popularmovies: [],
             topmovies: [],
             /*ready : false*/
+            datosFiltrados: [],
+            textoSearch:"",
 
 
         }
@@ -59,6 +61,25 @@ class Home extends Component {
             })
         }
     }
+
+    //buscador
+    search(buscado){
+        let listaFiltrada= this.state.datos.filter(movies=>movies.title.toUpperCase().includes(buscado.toUpperCase()))
+         if (listaFiltrada.length> 0) {
+             this.setState({
+                 datosFiltrados:listaFiltrada,
+                 textoSearch:""
+             })
+             
+         }else{
+ 
+             this.setState({
+                 datosFiltrados:[],
+                 textoSearch: "No hay resultados para su parametro de busqueda"
+             })
+            
+         }
+     }
 
     /*componentDidMount(){
         fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=8f700484f7a536b79e4de455e52eb11a&language=en-US&page=1')
