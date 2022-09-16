@@ -15,8 +15,6 @@ function App() {
   return(
 
     <div>
-      <Header search={(buscado)=>this.search(buscado)} />
-    <Header menu ={opciones}/>
     <Home/>
     <Footer/>
     </div>

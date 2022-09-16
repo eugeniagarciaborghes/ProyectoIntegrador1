@@ -24,6 +24,7 @@ class Header extends Component{
     }, () =>this.props.search(this.state.valor));
 }
 
+//faltan links a home, favs, y ver todas
   render(){
     return (
         <header className = 'header'>
@@ -39,4 +40,4 @@ class Header extends Component{
   }
 }
 
-export default Header;
+export default Header

@@ -27,7 +27,7 @@ class Movies extends Component{
     render(){
         return(
             <>
-            <Search filtrar={(nombre)=> this.filtrarPersonajes(nombre)} />
+           {/* <Search filtrar={(nombre)=> this.filtrarPersonajes(nombre)} /> */}
               <h2>Personajes de películas</h2>
               <section className="card-container">
                 {this.state.personajes.map((personaje, idx) => 
@@ -38,13 +38,6 @@ class Movies extends Component{
                   <button onClick={()=> this.cargarMas()}>Cargar mas</button>
               </section>
             </>
-            
-
-
-
-
-
-
 
             /*<article>
                 
