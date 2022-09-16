@@ -57,7 +57,7 @@ class Home extends Component {
 
     //buscador
     search(buscado){
-        fetch('https://api.themoviedb.org/3/movie/popular?api_key=8f700484f7a536b79e4de455e52eb11a')
+        fetch(`https://api.themoviedb.org/3/search/movie?api_key=8f700484f7a536b79e4de455e52eb11a&language=en-US&page=1&${buscado}`)
         .then(response => response.json())
         .then(data => this.setState({
             datosFiltrados: data.data
