@@ -1,38 +1,42 @@
-import React from 'react';
+import React, { Component } from "react";
 import './Header.css';
 
-function Header(props) {
+class Header extends Component{
+    constructor(props){
+      super(props)
+      this.state ={
+          valor:''
+  
+      }
+  }
+
+// metodos que se encargan de gestionar el cambio dentro del estado
+
+//prevenir que mi sitio se recargue
+  evitarDefault(evento){
+    evento.preventDefault();
+}
+
+//para gestionar los cambios del estado
+  controlarCambios(event){
+    this.setState({
+        valor: event.target.value
+    }, () =>this.props.search(this.state.valor));
+}
+
+  render(){
     return (
-        <header>
-            <div>
-                <div className = "identidad"> 
-                    
-                    <img className= "logo" src= '' alt=''></img> 
-
-                     <h1>Movies</h1>
-                     
-                </div>
-                <div className="nav-bar">
-                    <nav>
-                    {props.menu.map((opcion, idx) =><li key={`${Date.now()}-${idx}`} >{opcion}</li>)}
-                    </nav>
-                </div>
-
-                <ul>
-                    <li>
-                        <a href= '/'> HOME</a>
-                    </li>
-
-                    <li>
-                        <a href= ''> FAV</a>
-                    </li>
-
-                    
-                    
-                </ul>
-            </div>
+        <header className = 'header'>
+            <h1 className = 'titulo'>Movies</h1>
+            <section className="menu">
+            <form action="" onSubmit={ (evento) => this.evitarDefault(evento) }>
+                <input type="text" onChange={(event)=> this.controlarCambios(event) } value={this.state.valor} placeholder="Buscar Peliculas"/>
+                <button type="submit" value="submit" >Buscar</button>
+            </form>
+            </section>
         </header>
     )
+  }
 }
 
 export default Header;
