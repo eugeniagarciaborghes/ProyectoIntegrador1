@@ -18,9 +18,9 @@ class Header extends Component{
 }
 
 //para gestionar los cambios del estado
-  controlarCambios(event){
+  controlarCambios(evento){
     this.setState({
-        valor: event.target.value
+        valor: evento.target.value
     }, () =>this.props.search(this.state.valor));
 }
 
@@ -30,8 +30,8 @@ class Header extends Component{
         <header className = 'header'>
             <h1 className = 'titulo'>Movies</h1>
             <section className="menu">
-            <form action="" onSubmit={ (evento) => this.evitarDefault(evento) }>
-                <input type="text" onChange={(event)=> this.controlarCambios(event) } value={this.state.valor} placeholder="Buscar Peliculas"/>
+            <form onSubmit={ (evento) => this.evitarDefault(evento) }>
+                <input type="text" onChange={(evento)=> this.controlarCambios(evento) } value={this.state.valor} placeholder="Buscar Peliculas"/>
                 <button type="submit" value="submit" >Buscar</button>
             </form>
             </section>
