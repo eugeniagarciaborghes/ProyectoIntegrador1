@@ -18,8 +18,8 @@ class Buscador extends Component {
 //para gestionar los cambios del estado
   controlarCambios(evento){
    this.setState({
-       valor: evento.target.value
-    }, () =>this.props.search(this.state.valor));
+       valorInput: evento.target.value
+    }, () =>this.props.search(this.state.valorInput));
 }
 
     render(){

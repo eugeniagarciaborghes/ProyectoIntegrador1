@@ -57,8 +57,8 @@ class Home extends Component {
     }
 
     //buscador
-    search(buscado){
-        fetch(`https://api.themoviedb.org/3/search/movie?api_key=8f700484f7a536b79e4de455e52eb11a&language=en-US&page=1&${buscado}`)
+    search(valor){
+        fetch(`https://api.themoviedb.org/3/search/movie?api_key=8f700484f7a536b79e4de455e52eb11a&language=en-US&page=${valor}`)
         .then(response => response.json())
         .then(data => this.setState({
             datosFiltrados: data.data
@@ -66,27 +66,13 @@ class Home extends Component {
         .catch (error => console.log(error));
      }
 
-    /*componentDidMount(){
-        fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=8f700484f7a536b79e4de455e52eb11a&language=en-US&page=1')
-        .then(response => response.json())
-        .then(data => this.setState({
-            topmovies: data.results,
-            //ready : true
-
-        }, console.log(data.results)))
-        .catch (error => console.log(error));
-    }*/
-
-
-   // https://api.themoviedb.org/3/movie/top_rated?api_key=8f700484f7a536b79e4de455e52eb11a&language=en-US&page=1
-
 
     render () {
         return (
             <div>
                 <React.Fragment>
                 <Header></Header>
-                <Buscador search={(buscado)=>this.search(buscado)} />
+                <Buscador search={(valor)=>this.search(valor)} />
                 {
                   this.state.datosFiltrados.length === 0
                   ?
