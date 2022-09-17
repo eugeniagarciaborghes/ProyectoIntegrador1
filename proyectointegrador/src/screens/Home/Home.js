@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import Cards from '../../componentes/Cards/Cards';
 import Header from "../../componentes/Header/Header";
 import Buscador from '../../componentes/Buscador/Buscador';
+import Footer from '../../componentes/Footer/Footer';
 /*import App from '../../App';*/
 
 class Home extends Component {
@@ -104,8 +105,7 @@ class Home extends Component {
                         :
                         <Cards info ={this.state.topmovies} /> }
                     </>
-                </section>  
-                termina top movies 
+                </section>   
                 </React.Fragment>
             </div>
             

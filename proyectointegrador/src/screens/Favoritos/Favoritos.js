@@ -15,7 +15,7 @@ class Favoritos extends Component {
             parsedStorage.map(elm => {
                 fetch(`https://api.themoviedb.org/3/account/{account_id}/favorite?api_key=8f700484f7a536b79e4de455e52eb11a${elm}`)
                 .then(resp => resp.json())
-                .then(data => this,setState({
+                .then(data => this.setState({
                     arrFavs: this.state.arrFavs.concat(data)
                 }, ()=> console.log(this.state.arrFvas)))
                 .catch(err => console.log(err))
