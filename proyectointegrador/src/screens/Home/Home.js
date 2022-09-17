@@ -3,8 +3,6 @@ import {Link} from 'react-router-dom'
 import Cards from '../../componentes/Cards/Cards';
 import Header from "../../componentes/Header/Header";
 import Buscador from '../../componentes/Buscador/Buscador';
-import Footer from '../../componentes/Footer/Footer';
-/*import App from '../../App';*/
 
 class Home extends Component {
     constructor (props){
@@ -59,12 +57,22 @@ class Home extends Component {
 
     //buscador
     search(valor){
-        fetch(`https://api.themoviedb.org/3/search/movie?api_key=8f700484f7a536b79e4de455e52eb11a&language=en-US&page=${valor}`)
-        .then(response => response.json())
-        .then(data => this.setState({
-            datosFiltrados: data.data
-             }))                  
-        .catch (error => console.log(error));
+        console.log(valor)
+        if (valor !== '') {
+            fetch(`https://api.themoviedb.org/3/search/movie?api_key=8f700484f7a536b79e4de455e52eb11a&query=${valor}`)
+            .then(response => response.json())
+            .then(data =>
+                this.setState({
+                datosFiltrados: data.results
+                 }))                  
+            .catch (error => console.log(error)); 
+        } else {
+            this.setState({
+                datosFiltrados: [],
+            })
+        
+        }
+        
      }
 
 
@@ -75,7 +83,7 @@ class Home extends Component {
                 <Header></Header>
                 <Buscador search={(valor)=>this.search(valor)} />
                 {
-                  this.state.datosFiltrados.length === 0
+                  this.state.datosFiltrados.length > 0
                   ?
                  <Cards info={this.state.datosFiltrados}/>
                  :''
