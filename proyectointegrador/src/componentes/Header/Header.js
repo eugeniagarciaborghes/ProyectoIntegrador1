@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import './Header.css';
+import { Link } from 'react-router-dom'
+
 
 class Header extends Component{
     constructor(props){
@@ -9,16 +10,21 @@ class Header extends Component{
       }
   }
 
-
-//faltan links a home, favs, y ver todas
   render(){
     return (
         <header className = 'header'>
             <h1 className = 'titulo'>Movies</h1>
-            <section className="menu">
-      
-    
-            </section>
+            <ul className="menu">
+              <li>
+                <Link href='/'>Home</Link>
+              </li>
+              <li>
+                <Link href='/favoritos'>Favoritos</Link>
+              </li>
+              <li>
+                <Link href='/'>Ver Todas</Link>
+              </li>
+            </ul>
         </header>
     )
   }

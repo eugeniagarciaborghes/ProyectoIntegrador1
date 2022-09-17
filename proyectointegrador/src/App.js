@@ -12,12 +12,15 @@ function App() {
   const opciones = ['Home', 'Favoritos']
   return(
 
+//falta link de ver todas
     <>
     <Switch>
-      <Route path='/' component={Home}/>
+      <Route path='/' exact={true} component={Home}/>
       <Route path='/favoritos' component={Favoritos}/>
       <Route path={'/details/:id'} component={Details}/>
+      <Route path='/notfound' component={NotFound}/>
     </Switch>
+    <Footer></Footer>
     </>
  
   );
