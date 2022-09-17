@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Cards from '../../componentes/Cards/Cards';
 import Header from "../../componentes/Header/Header";
+import Buscador from '../../componentes/Buscador/Buscador';
 /*import App from '../../App';*/
 
 class Home extends Component {
@@ -84,7 +85,8 @@ class Home extends Component {
         return (
             <div>
                 <React.Fragment>
-                <Header search={(buscado)=>this.search(buscado)} />
+                <Header></Header>
+                <Buscador search={(buscado)=>this.search(buscado)} />
                 {
                   this.state.datosFiltrados.length === 0
                   ?
