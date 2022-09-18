@@ -23,11 +23,11 @@ class Favoritos extends Component {
         }
     }
 
-    agregarAFavoritos = (x) => {
+    /*agregarAFavoritos = (x) => {
         let _peliculas = this.state.arrFavs;
         _peliculas.push(x);
         this.setState({ arrFavs: _peliculas })        
-    }
+    }*/
 
     render() {
         return (

@@ -39,7 +39,7 @@ class Card extends Component {
                             <a href='/' className='votonVerMas'>Ver Más</a>
                         </li>
                         <li className='botonPeli'>
-                            Ir a detalles
+                            <a href={`/details/${this.props.info.id}`} className='votonVerMas'>Detalles</a>
                         </li>
                         {
                             this.state.favorito
