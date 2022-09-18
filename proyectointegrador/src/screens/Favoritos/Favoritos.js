@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Card from '../../componentes/Card/Card';
+
+
 class Favoritos extends Component {
     constructor(props){
         super(props)
@@ -23,33 +25,25 @@ class Favoritos extends Component {
         }
     }
 
-    /*agregarAFavoritos = (x) => {
-        let _peliculas = this.state.arrFavs;
-        _peliculas.push(x);
-        this.setState({ arrFavs: _peliculas })        
-    }*/
-
     render() {
         return (
             <>
                 <h2>Películas favoritas</h2>
                 <section className='card-container'>
-                    {
-                        this.state.peliculas.map((unaPelicula, idx) => <Card key={unaPelicula.title + idx} datosPelicula={unaPelicula} />)
-                    }
-                    
-
+                <div>
+                   {this.state.arrFavs.map((personaje, idx) => 
+                    <Card 
+                      key={`${Date.now()}-${idx}`}  
+                      info={personaje}
+                     //borrar={(name)=> this.borrar(name)}
+                    //favorito={(id)=> this.favorites(id)}
+                     />)}
+                </div>
                 </section>
-
             </>
         )
 
-
     }
-
-
-
-
 
 }
 

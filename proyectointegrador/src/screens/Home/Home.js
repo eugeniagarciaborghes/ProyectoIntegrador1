@@ -81,11 +81,11 @@ class Home extends Component {
         return (
             <main>
                 <React.Fragment>
-                <Header></Header>
+                <Header/>
                 <Buscador search={(valor)=>this.search(valor)} />
                 {
                   this.state.datosFiltrados.length > 0
-                  ?
+                  ? 
                  <Cards info={this.state.datosFiltrados}/>
                  :''
                 }
@@ -93,11 +93,7 @@ class Home extends Component {
                 <section className='peliculas'>
                     <>
                         { this.state.popularmovies === '' ?   
-                        <>
-                        <h1> Home</h1>
-                        <h3> Cargando...</h3>
-                        <p> Ver mas</p>
-                        </>
+                        <div class="lds-ellipsis"></div>
                         :
                         <Cards info ={this.state.popularmovies} /> }
                     </>
@@ -106,11 +102,7 @@ class Home extends Component {
                 <section className='peliculas'>
                     <>
                         { this.state.topmovies === '' ?   
-                        <>
-                        <h1> Home</h1>
-                        <h3> Cargando...</h3>
-                        <p> Ver mas</p>
-                        </>
+                        <div class="lds-ellipsis"></div>
                         :
                         <Cards info ={this.state.topmovies} /> }
                     </>
