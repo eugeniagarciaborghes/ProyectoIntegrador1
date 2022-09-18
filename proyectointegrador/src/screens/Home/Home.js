@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import Cards from '../../componentes/Cards/Cards';
 import Header from "../../componentes/Header/Header";
 import Buscador from '../../componentes/Buscador/Buscador';
+import style from '../Home/Home.css';
 
 class Home extends Component {
     constructor (props){
@@ -78,7 +79,7 @@ class Home extends Component {
 
     render () {
         return (
-            <div>
+            <main>
                 <React.Fragment>
                 <Header></Header>
                 <Buscador search={(valor)=>this.search(valor)} />
@@ -88,8 +89,8 @@ class Home extends Component {
                  <Cards info={this.state.datosFiltrados}/>
                  :''
                 }
-                <h2> Peliculas populares</h2>
-                <section>
+                <h2 className='h2'> Peliculas populares</h2>
+                <section className='peliculas'>
                     <>
                         { this.state.popularmovies === '' ?   
                         <>
@@ -101,8 +102,8 @@ class Home extends Component {
                         <Cards info ={this.state.popularmovies} /> }
                     </>
                 </section>   
-                <h2> Top rated movies</h2>
-                <section>
+                <h2 className='h2'> Top rated movies</h2>
+                <section className='peliculas'>
                     <>
                         { this.state.topmovies === '' ?   
                         <>
@@ -115,7 +116,7 @@ class Home extends Component {
                     </>
                 </section>   
                 </React.Fragment>
-            </div>
+            </main>
             
 
         )

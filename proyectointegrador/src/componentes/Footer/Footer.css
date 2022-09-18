@@ -1,9 +1,12 @@
 .footer{
     display: flex;
-    background-color:grey;
+    background-color:rgb(139, 1, 1);
     justify-content: right;
+
     
 }
 .team{
     margin-right: 40%;
+    color: white;
+    
 }

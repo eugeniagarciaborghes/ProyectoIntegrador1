@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom'
-
+import '../Header/Header.css'
 
 class Header extends Component{
     constructor(props){
@@ -13,7 +13,8 @@ class Header extends Component{
   render(){
     return (
         <header className = 'header'>
-            <h1 className = 'titulo'>Movies</h1>
+            <h1 className = 'titulo'>MovieCenter
+            </h1>
             <ul className="menu">
               <li>
                 <Link href='/'>Home</Link>

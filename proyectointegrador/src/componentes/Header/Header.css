@@ -1,20 +1,27 @@
 .titulo{
-  color: #fcfc62 ;
+  color: #fcfcfa ;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 67px;
+  font-style: italic;
+  font-size: 50px;
   margin-left: 2%;
 }
 .header{
   display: flex;
-  background-color: #a3a3a3;
+  background-color: #6e0101;
 }
 
-.menu{
-display: flex; 
-align-items: center;
-flex-direction: row;
-justify-content: space-between ;
-padding-left: 50%;
+.li {
+  background-color: black;
+
+}
+
+.menu {
+  display: flex; 
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between ;
+  padding-left: 50%;
+  
 }
 
 @media only screen and (max-width: 768px){
@@ -42,13 +49,14 @@ padding-left: 50%;
 
 @media only screen and (max-width: 420px){
   .titulo{
-      color: #fcfc62 ;
+      color: #fafaf9 ;
       font-family: Arial, Helvetica, sans-serif;
+      font-style: italic;
       font-size: 15px;
       margin-left: 2%;
   }
   .header{
-      background-color: #a3a3a3;
+      background-color: #800101;
   }
   
   .menu{
