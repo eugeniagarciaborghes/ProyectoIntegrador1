@@ -54,4 +54,3 @@ class Favoritos extends Component {
 }
 
 export default Favoritos
-
