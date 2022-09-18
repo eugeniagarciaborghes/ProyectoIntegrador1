@@ -2,9 +2,12 @@ import React from 'react'
 
 function NotFound() {
   return (
-    <div>
+    /*<div>
         <h1>ERROR 404: Page Not Found</h1>
-    </div>
+    </div>*/
+    <React.Fragment>
+      <h1>ERROR 404: Page Not Found</h1>
+    </React.Fragment>
   )
 }
 

@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import Cards from '../../componentes/Cards/Cards';
 import Header from "../../componentes/Header/Header";
 import Buscador from '../../componentes/Buscador/Buscador';
-import style from '../Home/Home.css';
+import '../Home/Home.css';
 
 class Home extends Component {
     constructor (props){

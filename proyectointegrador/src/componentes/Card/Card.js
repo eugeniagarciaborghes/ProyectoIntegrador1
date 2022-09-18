@@ -1,10 +1,22 @@
 import React, {Component} from 'react'
 import "./Card.css";
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
 class Card extends Component {
     constructor(props){
         super(props)
+        this.state={
+            butttonAgregar:"",
+            buttonEliminar:"",
+        }
+    }
+
+    removeFavorites(){
+
+    }
+
+    addFavorites(){
+        
     }
         
     render () {
@@ -24,14 +36,18 @@ class Card extends Component {
                 <>
                     <ul className='botonesPelis'>
                         <li className='botonPeli'>
-                            <a href='' className='votonVerMas'>Ver Más</a>
+                            <a href='/' className='votonVerMas'>Ver Más</a>
                         </li>
                         <li className='botonPeli'>
                             Ir a detalles
                         </li>
-                        <li className='botonPeli'>
-                            Agregar a Fav
-                        </li>
+                        {
+                            this.state.favorito
+                            ?
+                            <button onClick={()=>this.removeFavorites(this.props.info.id)}>Añadir a favoritos</button>
+                            :
+                            <button onClick={()=>this.addFavorites(this.props.info.id)}>Sacar de favoritos</button>
+                        }
                     </ul>
                     
                    

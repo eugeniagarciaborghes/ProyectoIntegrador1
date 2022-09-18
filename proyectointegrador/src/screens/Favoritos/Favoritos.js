@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-
+import Card from '../../componentes/Card/Card';
 class Favoritos extends Component {
     constructor(props){
         super(props)
         this.state = {
-            arrFavs:[]
+            arrFavs:[],
         }
     }
 
@@ -17,17 +17,38 @@ class Favoritos extends Component {
                 .then(resp => resp.json())
                 .then(data => this.setState({
                     arrFavs: this.state.arrFavs.concat(data)
-                }, ()=> console.log(this.state.arrFvas)))
+                }, ()=> console.log(this.state.arrFavs)))
                 .catch(err => console.log(err))
             })
         }
     }
 
-    render(){
-        return(
-            <div>Favoritos</div>
-        )
+    agregarAFavoritos = (x) => {
+        let _peliculas = this.state.arrFavs;
+        _peliculas.push(x);
+        this.setState({ arrFavs: _peliculas })        
     }
+
+    render() {
+        return (
+            <>
+                <h2>Películas favoritas</h2>
+                <section className='card-container'>
+                    {
+                        this.state.peliculas.map((unaPelicula, idx) => <Card key={unaPelicula.title + idx} datosPelicula={unaPelicula} />)
+                    }
+                    
+
+                </section>
+
+            </>
+        )
+
+
+    }
+
+
+
 
 
 }

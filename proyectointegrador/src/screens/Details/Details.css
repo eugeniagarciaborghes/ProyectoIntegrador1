@@ -1,0 +1,15 @@
+main {
+    background-color: brown;
+}
+
+
+.movieDetail {
+    background-color: rgb(161, 0, 0);
+    
+}
+
+.movieDetail p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
