@@ -19,7 +19,8 @@ function App() {
       <Route path='/' exact={true} component={Home}/>
       <Route path='/favoritos' component={Favoritos}/>
       <Route path={'/details/:id'} component={Details}/>
-      <Route path={'/notfound'} component={NotFound}/>
+      <Route path={'/TodasLasPelis'} component={TodasLasPelis}/>
+      <Route path={'/'} component={NotFound}/>
       
     </Switch>
     <Footer></Footer>

@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import "./Card.css";
-// import {Link} from 'react-router-dom';
+import "./Card.css";import {Link} from 'react-router-dom';
 
 class Card extends Component {
     constructor(props){
@@ -75,7 +74,7 @@ class Card extends Component {
                             <a href='/' className='votonVerMas'>Ver Más</a>
                         </li>
                         <li className='botonPeli'>
-                            <a href={`/details/${this.props.info.id}`} className='votonVerMas'>Detalles</a>
+                            <Link to={`/details/${this.props.info.id}`} className='votonVerMas'>Detalles</Link>
                         </li>
                         {
                             this.state.favorito ?
@@ -83,7 +82,6 @@ class Card extends Component {
                             :
                             <button onClick={()=>this.addFavorites(this.props.info.id)}>Sacar de favoritos</button>
                         }
-                        <button onClick={() => this.props.borrar(this.props.info.id)}>Borrar</button>
                     </ul>
                     
                    

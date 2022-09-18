@@ -17,13 +17,13 @@ class Header extends Component{
             </h1>
             <ul className="menu">
               <li>
-                <Link href='/'>Home</Link>
+                <Link to='/'>Home</Link>
               </li>
               <li>
-                <Link href='/favoritos'>Favoritos</Link>
+                <Link to='/favoritos'>Favoritos</Link>
               </li>
               <li>
-                <Link href='/'>Ver Todas</Link>
+                <Link to='/TodasLasPelis'>Ver Todas</Link>
               </li>
             </ul>
         </header>
