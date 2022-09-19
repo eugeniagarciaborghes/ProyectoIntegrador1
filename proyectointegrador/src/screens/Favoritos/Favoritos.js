@@ -31,12 +31,10 @@ class Favoritos extends Component {
                 <h2>Películas favoritas</h2>
                 <section className='card-container'>
                 <div>
-                   {this.state.arrFavs.map((personaje, idx) => 
+                   {this.state.arrFavs.map((peliculas, idx) => 
                     <Card 
                       key={`${Date.now()}-${idx}`}  
-                      info={personaje}
-                     //borrar={(name)=> this.borrar(name)}
-                    //favorito={(id)=> this.favorites(id)}
+                      info={peliculas}
                      />)}
                 </div>
                 </section>
