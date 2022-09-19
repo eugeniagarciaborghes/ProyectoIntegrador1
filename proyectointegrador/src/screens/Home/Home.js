@@ -1,17 +1,17 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+//import {Link} from 'react-router-dom'
 import Cards from '../../componentes/Cards/Cards';
-import Card from '../../componentes/Card/Card';
+//import Card from '../../componentes/Card/Card';
 import Header from "../../componentes/Header/Header";
 import Buscador from '../../componentes/Buscador/Buscador';
 import '../Home/Home.css';
 
-class Home extends Component {
+class Home extends Component { //
     constructor (props){
         super (props)
         this.state={
-            mostrarMas: false,
-            texto : 'Mostrar Mas',
+           // mostrarMas: false,
+            //texto : 'Mostrar Mas',
             popularmovies: [],
             topmovies: [],
             /*ready : false*/
@@ -20,7 +20,7 @@ class Home extends Component {
         }
     }
 
-    componentDidMount(){
+    componentDidMount(){ //
         fetch('https://api.themoviedb.org/3/movie/popular?api_key=8f700484f7a536b79e4de455e52eb11a')
         .then(response => response.json())
         .then(data => this.setState({
