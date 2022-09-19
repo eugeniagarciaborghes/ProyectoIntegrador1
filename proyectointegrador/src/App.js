@@ -19,10 +19,10 @@ function App() {
     <Switch>
       <Route path='/' exact={true} component={Home}/>
       <Route path='/favoritos' component={Favoritos}/>
-      <Route path={'/details/:id'} component={Details}/>
-      <Route path={'/TodasLasPelisPopulares'} component={TodasLasPelisPopulares}/>
-      <Route path={'/TodasLasPelisTop'} component={TodasLasPelisTop}/>
-      <Route path={'/'} component={NotFound}/>
+      <Route path='/details/:id' component={Details}/>
+      <Route path='/TodasLasPelisPopulares' component={TodasLasPelisPopulares}/>
+      <Route path='/TodasLasPelisTop' component={TodasLasPelisTop}/>
+      <Route path=''component={NotFound}/>
       
     </Switch>
     <Footer></Footer>
