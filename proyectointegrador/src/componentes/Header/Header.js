@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from 'react-router-dom'
 import '../Header/Header.css'
 
+
 class Header extends Component{
     constructor(props){
       super(props)
@@ -23,7 +24,10 @@ class Header extends Component{
                 <Link to='/favoritos'>Favoritos</Link>
               </li>
               <li>
-                <Link to='/TodasLasPelis'>Ver Todas</Link>
+                <Link to='/TodasLasPelisPopulares'>Pelis Populares</Link>
+              </li>
+              <li>
+                <Link to='/TodasLasPelisTop'>Peliculas Top</Link>
               </li>
             </ul>
         </header>

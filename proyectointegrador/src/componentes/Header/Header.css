@@ -8,6 +8,8 @@
 .header{
   display: flex;
   background-color: #6e0101;
+  border-style: ridge;
+  border-color: rgb(99, 0, 0);
 }
 
 .li {

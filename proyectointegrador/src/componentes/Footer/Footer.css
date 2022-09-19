@@ -2,6 +2,8 @@
     display: flex;
     background-color:rgb(139, 1, 1);
     justify-content: right;
+    border-style: ridge;
+    border-color: rgb(99, 0, 0);
 
     
 }

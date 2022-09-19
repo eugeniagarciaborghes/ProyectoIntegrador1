@@ -6,14 +6,16 @@ import Header from "../../componentes/Header/Header";
 import Buscador from '../../componentes/Buscador/Buscador';
 import '../Home/Home.css';
 
-class Home extends Component {
+
+
+
+class TodasLasPelisPopulares extends Component {
     constructor (props){
         super (props)
         this.state={
             mostrarMas: false,
             texto : 'Mostrar Mas',
             popularmovies: [],
-            topmovies: [],
             /*ready : false*/
             datosFiltrados: [],
 
@@ -31,16 +33,6 @@ class Home extends Component {
         .catch (error => console.log(error));
      
     
-        /*-------------segundo fetch----------------------------------------*/
-
-        fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=8f700484f7a536b79e4de455e52eb11a&language=en-US&page=1')
-        .then(response => response.json())
-        .then(data => this.setState({
-            topmovies: data.results,
-            //ready : true
-
-        }, console.log("Top movies",data.results)))
-        .catch (error => console.log(error));
     }
 
     masInfo (){
@@ -57,25 +49,6 @@ class Home extends Component {
         }
     }
 
-    //buscador
-    search(valor){
-        console.log(valor)
-        if (valor !== '') {
-            fetch(`https://api.themoviedb.org/3/search/movie?api_key=8f700484f7a536b79e4de455e52eb11a&query=${valor}`)
-            .then(response => response.json())
-            .then(data =>
-                this.setState({
-                datosFiltrados: data.results
-                 }))                  
-            .catch (error => console.log(error)); 
-        } else {
-            this.setState({
-                datosFiltrados: [],
-            })
-        
-        }
-        
-     }
 
 
     render () {
@@ -90,22 +63,13 @@ class Home extends Component {
                  <Cards info={this.state.datosFiltrados}/>
                  :''
                 }
-                <h2 className='h2'> Peliculas populares</h2>
+                <h2 className='h2'> Todas las peliculas populares</h2>
                 <section className='peliculas'>
                     <>
                         { this.state.popularmovies === '' ?   
                         <div class="lds-ellipsis"></div>
                         :
                         <Cards info ={this.state.popularmovies} /> }
-                    </>
-                </section>   
-                <h2 className='h2'> Top rated movies</h2>
-                <section className='peliculas'>
-                    <>
-                        { this.state.topmovies === '' ?   
-                        <div class="lds-ellipsis"></div>
-                        :
-                        <Cards info ={this.state.topmovies} /> }
                     </>
                 </section>   
                 </React.Fragment>
@@ -121,4 +85,4 @@ class Home extends Component {
 }
 
 
-export default Home
+export default TodasLasPelisPopulares

@@ -36,21 +36,24 @@ class Details extends Component{
                     </div>
 
                     <section>
+
+                    <h2>{this.state.details.original_title}</h2>
+                    
                     <article className="portada">
-                    <img src={`https://image.tmdb.org/t/p/w500/${this.state.details.poster_path}`} alt=""/>
+                    <img src={`https://image.tmdb.org/t/p/w500/${this.state.details.poster_path}`} alt={this.state.details.original_title} />
                     </article>
+
 
                     <article className="movieDetail">
-                        <h2>{this.state.details.original_title}</h2>
-                        <p >{this.state.details.overview}</p>
-                        <p >Calificación: {this.state.details.vote_average}</p>
-                        <p >Fecha de Lanzamiento: {this.state.details.release_date}</p>
-
                         
-
-                    
+                        <p>{this.state.details.overview}</p>
+                        <p>Calificación: {this.state.details.vote_average}</p>
+                        <p>Fecha de Lanzamiento: {this.state.details.release_date}</p>
+                        <p>Genero: {this.state.details.genre_ids}</p>
 
                     </article>
+
+                    
                     </section>
                 </React.Fragment>
             </main>
