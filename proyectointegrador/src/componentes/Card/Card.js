@@ -11,7 +11,7 @@ class Card extends Component {
 
     componentDidMount(){
         let storage = localStorage.getItem('favoritos')
-        let parsedStorage = JSON.parse(storage) /*Array.includes()*/
+        let parsedStorage = JSON.parse(storage)
         let isFavorite
         if(parsedStorage !== null){
            isFavorite = parsedStorage.includes(this.props.info.id)
@@ -25,7 +25,7 @@ class Card extends Component {
 
     removeFavorites(id){
         let storage = localStorage.getItem('favoritos')
-        let storageParsed = JSON.parse(storage) /*[1, 2, 4, 95] */
+        let storageParsed = JSON.parse(storage)
         let filteredStorage = storageParsed.filter(elm => elm !== id)
         let storageToString = JSON.stringify(filteredStorage)
         localStorage.setItem('favoritos', storageToString)
@@ -57,9 +57,6 @@ class Card extends Component {
     render () {
         console.log(this.props.info);
         return (
-           
-           //<div>{this.props.info}</div>
-
            <article className="data-detail">
                 <div className="card-content">
                     <h4 className='tituloPeli'>{this.props.info.title}</h4>
