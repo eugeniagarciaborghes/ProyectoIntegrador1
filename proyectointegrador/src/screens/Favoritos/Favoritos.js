@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Card from '../../componentes/Card/Card';
+import Header from "../../componentes/Header/Header";
 
 
 /*class Favoritos extends Component {
@@ -91,6 +92,7 @@ class Favoritos extends Component {
     render() {
         return (
             <>
+            <Header/>
                 <h2>Películas favoritas</h2>
                 <section className='cardContainer'>
                     {
