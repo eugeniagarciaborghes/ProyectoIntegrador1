@@ -8,14 +8,11 @@ class Buscador extends Component {
         }
     }
 
-// metodos que se encargan de gestionar el cambio dentro del estado
 
-//prevenir que mi sitio se recargue
   evitarDefault(event){
     event.preventDefault();
 }
 
-//para gestionar los cambios del estado
   controlarCambios(evento){
    this.setState({
        valorInput: evento.target.value
