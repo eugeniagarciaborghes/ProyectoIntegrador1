@@ -2,20 +2,47 @@ main {
     background-color: brown;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
 
 .movieDetail {
     background-color: rgb(0, 0, 0);
     border: dotted yellow 10px;
+    padding: 20px;
     
 }
 
+
+.portada img {
+   width: 35vw;
+
+}
 .movieDetail p {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     font-weight: bold;
    
+
+
 }
 
 
+@media only screen and (max-width: 768px){
+    .portada img {
+        width: 80vw;
+     
+     }
+}
 
+@media only screen and (max-width: 420px){
+.portada img {
+   width: 80vw;
+
+}
+}

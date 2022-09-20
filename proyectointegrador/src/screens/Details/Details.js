@@ -34,10 +34,15 @@ class Details extends Component{
                         <h3>Cargando...</h3> :
                         <h3>{this.state.peliculas}</h3>}
                     </div>
-
-                    <section>
-
+                    <section className="titulo">
                     <h2>{this.state.details.original_title}</h2>
+
+                    </section>
+                    
+
+                    <section className="container">
+
+                    
                     
                     <article className="portada">
                     <img src={`https://image.tmdb.org/t/p/w500/${this.state.details.poster_path}`} alt={this.state.details.original_title} />

@@ -16,6 +16,7 @@ class Home extends Component { //
             topmovies: [],
             /*ready : false*/
             datosFiltrados: [],
+            favs: [],
 
         }
     }
@@ -43,19 +44,7 @@ class Home extends Component { //
         .catch (error => console.log(error));
     }
 
-    masInfo (){
-        if (this.state.verMas) {
-            this.setState({
-                mostrarMas: false,
-                texto: 'Mostrar más'
-            })
-        } else {
-            this.setState({
-                mostrarMas: true,
-                texto: 'Mostrar menos'
-            })
-        }
-    }
+    
 
     //buscador
     search(valor){

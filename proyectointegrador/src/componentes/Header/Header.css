@@ -10,6 +10,9 @@
   background-color: #6e0101;
   border-style: ridge;
   border-color: rgb(99, 0, 0);
+  padding-top: 25px;
+  padding-bottom: 25px; 
+  
 }
 
 .li {
@@ -21,29 +24,44 @@
   display: flex; 
   align-items: center;
   flex-direction: row;
-  justify-content: space-between ;
-  padding-left: 50%;
+  justify-content: space-around ;
+  padding-left: 20%;
   
+  
+}
+
+.menu li {
+  
+  font-size: 17px;
+  margin: 15px;
 }
 
 @media only screen and (max-width: 768px){
   .titulo{
-      color: #fcfc62 ;
+      color: #ffffff ;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 30px;
       margin-left: 2%;
+      
   }
   .header{
       display: flex;
-      background-color: #a3a3a3;
+      background-color: #7e0101;
   }
   
   .menu{
-  display: flex; 
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between ;
-  padding-left: 20%;
+    display: flex; 
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between ;
+    /*padding-left: 20%;*/
+
+  }
+
+  .menu li {
+  
+    font-size: 17px;
+    margin: 15px;
   }
   
 }
@@ -58,14 +76,15 @@
       margin-left: 2%;
   }
   .header{
-      background-color: #800101;
+      background-color: #7e0101;
   }
   
   .menu{
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between ;
-  padding-left: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between ;
+  
   
   }
   

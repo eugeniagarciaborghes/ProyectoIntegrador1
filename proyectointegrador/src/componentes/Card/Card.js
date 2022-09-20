@@ -1,13 +1,20 @@
 import React, {Component} from 'react'
-import "./Card.css";import {Link} from 'react-router-dom';
+import "./Card.css";
+import {Link} from 'react-router-dom';
 
 class Card extends Component {
     constructor(props){
         super(props)
         this.state={
-            favorito:false
+            favorito:false,
+            mostrarMas: 'hide',
+            texto: 'Mostrar más',
+            favsMessage: "Fav"
         }
+        
     }
+
+
 
     componentDidMount(){
         let storage = localStorage.getItem('favoritos')
@@ -80,6 +87,11 @@ class Card extends Component {
                             <button onClick={()=>this.addFavorites(this.props.info.id)}>Sacar de favoritos</button>
                         }
                     </ul>
+                    
+
+                    
+
+
                     
                    
                 </>
